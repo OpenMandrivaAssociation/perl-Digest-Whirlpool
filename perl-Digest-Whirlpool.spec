@@ -1,7 +1,7 @@
 %define	real_name	Digest-Whirlpool
 %define	name		perl-%real_name
-%define	version		1.0.3
-%define	release		1mdk
+%define	version		1.0.5
+%define	release		%mkrel 1 
 
 Summary:	Perl 512-bit one-way hash
 Name:		%{name}
@@ -9,7 +9,7 @@ Version:	%{version}
 Release:	%{release}
 License:	GPL
 Group:		Development/Perl
-Source:		http://search.cpan.org/CPAN/authors/id/J/JC/JCDUQUE/%{real_name}-%{version}.tar.bz2
+Source:		http://search.cpan.org/CPAN/authors/id/A/AV/AVAR/%{real_name}-%{version}.tar.bz2
 URL:		http://search.cpan.org/dist/%{real_name}/
 BuildRequires:	perl-devel
 BuildRoot:	%{_tmppath}/%{name}-buildroot
@@ -37,6 +37,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(-,root,root)
 %doc README Changes
+%{_bindir}/whirlpoolsum
 %{_mandir}/*/*
 %{perl_vendorarch}/Digest/*.pm
 %{perl_vendorarch}/auto/Digest/Whirlpool
