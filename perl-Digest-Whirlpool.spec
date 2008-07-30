@@ -1,7 +1,7 @@
 %define	real_name	Digest-Whirlpool
 %define	name		perl-%real_name
 %define	version		1.0.6
-%define	release		%mkrel 2
+%define	release		%mkrel 4
 
 Summary:	Perl 512-bit one-way hash
 Name:		%{name}
