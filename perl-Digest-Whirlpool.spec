@@ -1,24 +1,24 @@
-%define	real_name	Digest-Whirlpool
-%define	name		perl-%real_name
-%define	version		1.0.6
-%define	release		%mkrel 5
+%define	upstream_name	 Digest-Whirlpool
+%define upstream_version 1.09
+
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary:	Perl 512-bit one-way hash
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
 License:	GPL
 Group:		Development/Perl
-Source:		http://search.cpan.org/CPAN/authors/id/A/AV/AVAR/%{real_name}-%{version}.tar.bz2
-URL:		http://search.cpan.org/dist/%{real_name}/
+Url:		http://search.cpan.org/dist/%{upstream_name}/
+Source0:	http://search.cpan.org/CPAN/authors/id/A/AV/AVAR/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires:	perl-devel
-BuildRoot:	%{_tmppath}/%{name}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Digest::Whirlpool is a 512-bit, collision-resistant, one-way hash function.
 
 %prep
-%setup -q -n %{real_name}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
@@ -41,4 +41,3 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/*
 %{perl_vendorarch}/Digest/*.pm
 %{perl_vendorarch}/auto/Digest/Whirlpool
-
