@@ -1,15 +1,15 @@
 %define	upstream_name	 Digest-Whirlpool
-%define upstream_version 1.09
+%define upstream_version 2.04
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	6
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Perl 512-bit one-way hash
 License:	GPL
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}/
-Source0:	http://search.cpan.org/CPAN/authors/id/A/AV/AVAR/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://github.com/avar/digest-whirlpool
+Source0:	https://cpan.metacpan.org/authors/id/A/AV/AVAR/Digest-Whirlpool-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
