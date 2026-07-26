@@ -1,15 +1,13 @@
 %define	upstream_name	 Digest-Whirlpool
-%define upstream_version 2.04
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	2.04
+Release:	2
 
 Summary:	Perl 512-bit one-way hash
 License:	GPL
 Group:		Development/Perl
 Url:		https://github.com/avar/digest-whirlpool
-Source0:	https://cpan.metacpan.org/authors/id/A/AV/AVAR/Digest-Whirlpool-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/A/AV/AVAR/Digest-Whirlpool-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -18,7 +16,7 @@ BuildRequires:	perl-devel
 Digest::Whirlpool is a 512-bit, collision-resistant, one-way hash function.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
